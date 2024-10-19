@@ -1,7 +1,12 @@
+import Hero from "../components/Hero"
+import Wave from '../assets/wave.svg'
+
 const Home = () => {
     return (
-        <div>
-            <h1>This is home Components</h1>
+        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-116px)] relative">
+            <Hero></Hero>
+
+            <img className="absolute bottom-0 w-full" src={Wave} alt="" />
         </div>
     )
 }

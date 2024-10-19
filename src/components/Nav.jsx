@@ -20,32 +20,23 @@ const Nav = () => {
     }
 
     return (
-        <header className="shadow-lg sticky top-0 z-50">
+        <header className="shadow-lg sticky top-0 z-50 backdrop-blur-lg">
             <div className="navbar bg-base-100 max-w-[90%] xl:max-w-[1200px] mx-auto">
                 <div className="flex-1">
-                    <a className="btn btn-ghost text-2xl text-secondary gap-0 font-bold">Byte<span className="text-primary">Blaze</span></a>
+                    <a className="btn btn-ghost text-2xl text-secondary gap-0">Byte<span className="text-primary">Blaze</span></a>
                 </div>
                 <div className="flex-none">
-                    <ul className="menu menu-horizontal px-1 font-bold hidden sm:flex">
-                        <li>
-                            
-                            <NavLink to={'/'}>Home</NavLink>
-                            
-                        </li>
-                        <li className="text-primary">
-                            
-                            <NavLink to={'/blogs'}>Blogs</NavLink>
-                            
-                        </li>
-                        <li>
-                            
-                            <NavLink to={'/bookmarks'}>Bookmarks</NavLink>
+                    <ul className="menu menu-horizontal px-1 font-bold hidden sm:flex gap-8 text-lg">
                         
-                        </li>
+                            <NavLink className={({isActive})=> isActive ? 'text-primary' : 'font-bold'} to={'/'}>Home</NavLink>
+
+                            <NavLink className={({isActive})=> isActive ? 'text-primary' : 'font-bold'} to={'/blogs'}>Blogs</NavLink>
+                
+                            <NavLink className={({isActive})=> isActive ? 'text-primary' : 'font-bold'} to={'/bookmarks'}>Bookmarks</NavLink>
 
                     </ul>
 
-                    <label className="grid cursor-pointer place-items-center">
+                    <label className="grid cursor-pointer place-items-center ml-8">
                                 <input
                                     onChange={handleTheme}
                                     type="checkbox"
