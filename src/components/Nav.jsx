@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
 
@@ -28,17 +29,17 @@ const Nav = () => {
                     <ul className="menu menu-horizontal px-1 font-bold hidden sm:flex">
                         <li>
                             
-                            <a>Home</a>
+                            <NavLink to={'/'}>Home</NavLink>
                             
                         </li>
                         <li className="text-primary">
                             
-                            <a>Blogs</a>
+                            <NavLink to={'/blogs'}>Blogs</NavLink>
                             
                         </li>
                         <li>
                             
-                            <a>Bookmarks</a>
+                            <NavLink to={'/bookmarks'}>Bookmarks</NavLink>
                         
                         </li>
 
