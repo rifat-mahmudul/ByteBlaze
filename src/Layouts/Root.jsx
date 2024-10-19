@@ -1,7 +1,9 @@
+import Nav from "../components/Nav"
+
 const Root = () => {
   return (
     <div>
-      <h1>Hello, This is Root Page</h1>
+      <Nav></Nav>
     </div>
   )
 }
