@@ -12,7 +12,6 @@ const Details = () => {
     const [tabIndex, setTabIndex] = useState(0);
 
     const handleBookmark = blog => {
-        console.log(blog)
         saveBlog(blog);
     }
 
