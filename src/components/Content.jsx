@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom"
 import placeholderImage  from '../assets/404.jpg'
+import Markdown from 'react-markdown'
+import rehypeRaw from "rehype-raw";
 
     const Content = () => {
 
@@ -15,9 +17,10 @@ import placeholderImage  from '../assets/404.jpg'
 
                         <h3 className="font-bold text-xl mb-4">{title}</h3>
 
-                        {
-                            body_html
-                        }
+                        
+                        <Markdown rehypePlugins={[rehypeRaw]}>{body_html}</Markdown>
+                            
+                        
         </div>
     )
 }
