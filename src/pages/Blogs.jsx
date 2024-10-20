@@ -1,9 +1,14 @@
-import { Link, useLoaderData } from "react-router-dom"
+import { Link, useLoaderData, useNavigation } from "react-router-dom"
 import Blog from "../components/Blog";
+import Loader from "../components/Loader";
 
 const Blogs = () => {
 
     const blogs = useLoaderData();
+
+    const navigation = useNavigation();
+
+    if(navigation.state === 'loading') return <Loader></Loader>;
 
     return (
         <section className="text-gray-100">

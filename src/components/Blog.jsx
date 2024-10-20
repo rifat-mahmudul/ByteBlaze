@@ -6,7 +6,10 @@ import PropTypes from 'prop-types'
 
 const Blog = ({blog}) => {
 
+    
     const {cover_image, title, description, published_at, id} = blog;
+
+    
 
     return (
         <Link to={`/blog/${id}`} rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline  bg-gray-900 transition border-2 hover:scale-105 border-primary hover:border-secondary border-opacity-30  ">
